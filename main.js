@@ -5,10 +5,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log('포트폴리오 페이지가 성공적으로 로드되었습니다.');
 
-    // GitHub API를 이용해 최신 커밋 정보를 가져오는 함수 (예시)
-    // 실제 사용 시 'your-github-id'와 'your-repo'를 본인 정보로 변경해야 합니다.
+    // GitHub API를 이용해 최신 커밋 정보를 가져오는 함수
+    // 실제 사용 시 'khy0819'와 'ssg-retail-tech'로 변경되었습니다.
     async function fetchLatestCommit() {
-        const url = 'https://api.github.com/repos/your-github-id/your-repo/commits';
+        const url = 'https://api.github.com/repos/khy0819/ssg-retail-tech/commits';
         try {
             const response = await fetch(url);
             const data = await response.json();
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // fetchLatestCommit();
 
-    // 페이지 스크롤 이벤트에 따라 특정 효과를 주는 로직 (예시)
+    // 페이지 스크롤 이벤트에 따라 특정 효과를 주는 로직
     // 섹션이 화면에 보일 때 애니메이션 효과를 줄 수 있습니다.
     const sections = document.querySelectorAll('section');
     const observerOptions = {
@@ -49,8 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(section);
     });
 
-    // 버튼 클릭 시 메시지를 표시하는 기능 (예시)
-    // HTML에 <button id="myButton">버튼</button>이 있어야 작동합니다.
+    // 버튼 클릭 시 메시지를 표시하는 기능
     const myButton = document.getElementById('myButton');
     if (myButton) {
         myButton.addEventListener('click', () => {
